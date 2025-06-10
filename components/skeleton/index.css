@@ -1,0 +1,17 @@
+@keyframes skeletonAnimation {
+  0% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+.table-skeleton .table-item {
+  height: 50px;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.06) 25%, rgba(0, 0, 0, 0.15) 37%, rgba(0, 0, 0, 0.06) 63%);
+  background-size: 400% 100%;
+  animation-name: skeletonAnimation;
+  animation-duration: 1.4s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+}

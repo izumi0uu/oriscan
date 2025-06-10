@@ -1,0 +1,15 @@
+{
+  "plugins": ["prettier"],
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": "latest"
+  },
+  "rules": {
+    "prettier/prettier": "error",
+    "react/display-name": "off",
+    "react-hooks/exhaustive-deps": "off",
+    "no-img-element": "off",
+    "@next/next/no-img-element": "off"
+  },
+  "extends": ["next/core-web-vitals"]
+}
