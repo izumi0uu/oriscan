@@ -1,16 +1,19 @@
 import './globals.css'
 import 'highlight.js/styles/github-dark-dimmed.css'
-import { Inter } from 'next/font/google'
+// import { Inter } from 'next/font/google'
 import Script from 'next/script'
 import UnisatWallectContextProvider from '@/context/unisatWallectContext'
 import StyledComponentsRegistry from './../../utils/registry-style'
 import clsx from 'clsx'
 import { Images } from '@/utils/images'
 
-const inter = Inter({
-  subsets: ['latin'],
-  display: 'swap',
-})
+const systemFont = {
+  className: 'system-font',
+  style: {
+    fontFamily:
+      '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif',
+  },
+}
 // export async function generateMetadata() {
 //   return {
 //     openGraph: {
@@ -84,7 +87,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-PFK4WN9');`}
         </Script> */}
       </head>
-      <body className={clsx('flex flex-col justify-between min-h-screen', inter.className)}>
+      <body className={clsx('flex flex-col justify-between min-h-screen', systemFont.className)}>
         <StyledComponentsRegistry>
           <UnisatWallectContextProvider>{children}</UnisatWallectContextProvider>
         </StyledComponentsRegistry>
